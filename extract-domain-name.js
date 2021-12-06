@@ -1,5 +1,5 @@
 const extractHost = (url) => {
-    return url.replace(/(https?:\/\/)(www\.)?/, '').split('.')[0]
+    return url.replace(/(?:https?:\/\/)(www\.)?/, '').split('.')[0]
 }
 
 console.log(extractHost('https://www.google.com'))
@@ -12,3 +12,4 @@ console.log(extractHost('https://www.cnet.com'))
 // domainName("https://www.cnet.com") == "cnet"
 
 const domainName = url => url.replace(/https?:\/\/(?:www\.)?/, "").split(".")[0]
+
