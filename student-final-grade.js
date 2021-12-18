@@ -10,3 +10,14 @@ function finalGrade(exam, projects) {
         return 0
     }
 }
+
+console.log(finalGrade(95, 7))
+
+// refactored to lesser lines
+
+function finalGrade2(exam, projects) {
+    if (exam > 90 | projects > 10) return 100;
+    if (exam > 75 & projects >= 5) return 90;
+    if (exam > 50 & projects >= 2) return 75;
+    return 0
+}
