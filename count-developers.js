@@ -16,4 +16,12 @@ function countDevelopers(list) {
     return count
 }
 
-console.log(countDevelopers(list1))
+function greetDevelopers(list) {
+
+    return list.map((el) => {
+        return ({ ...el, greeting: `Hi ${el.firstName}, what do you like the most about ${el.language}?` })
+    })
+
+}
+
+console.log(greetDevelopers(list1))
