@@ -1,5 +1,5 @@
 const extractHost = (url) => {
-    return url.replace(/(?:https?:\/\/)(www\.)?/, '').split('.')[0]
+    return url.replace(/(?:https?:\/\/)(?:www\.)?/, '').split('.')[0]
 }
 
 console.log(extractHost('https://www.google.com'))
