@@ -24,4 +24,22 @@ function countLanguages(list) {
 }
 
 
-console.log(countLanguages(list1))
+function countLanguages2(list) {
+    return list.reduce(function(acc, currEl) {
+
+        if (currEl.language in acc) {
+            acc[currEl.language]++
+        } else {
+            acc[currEl.language] = 1
+        }
+
+        return acc
+
+    }, {})
+}
+
+console.log(countLanguages2(list1))
+
+// adding properties to objects
+// obj[propertyName] = value
+// directly increment object property values using obj[propertyName]++
